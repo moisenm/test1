@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Level access test Mohsen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Login with aria</h1>
+    <form method="post" action="/Login">
+        <div class="form_element">
+            <label class="form_label" for="Username">
+                User name 
+                <span class="form_required">required</span>
+            </label>
+            <input class="form_input" id="Username" type="text" name="Username" required pattern="[A-Za-z0-9]+">
+        </div>
+
+        <div class="form_element">
+            <label class="form_label" for="password">
+                Password
+                <span class="form_required">required</span>
+            </label>
+            <input class="form_input" id="password" type="password" name="password" required minlength="8" aria-describedby="passwordHint" autocomplete="current-password">
+            <p class="form_hint" id="passwordHint">The password must be minimum 8 characters.</p>
+            
+      
+            <input class="form_submit" type="submit" value="Login"> 
+            <a href="/forgotPassword">Forgot password?</a>
+
+        <div id="success_message" style="width:100%; height:100%; display:none; ">
+            <h2>Welcome! login successfull!</h2>
+    </div>
+    </div>
+        <div class="error_message"
+                style="width:100%; height:100%; display:none; ">
+                    <h2>Error</h2>
+                  <p>Sorry there was an error loging</p>
+</div>
+
+    </form>
+</body>
+
+</html>
